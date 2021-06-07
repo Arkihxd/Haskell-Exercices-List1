@@ -32,9 +32,8 @@ somaPares' x y = if mod x 2 == 0
                     somaPares' (x-1) (y+0)
 
 {- 5. Declare uma função que receba inteiros (m e n) e retorne a seguinte série: 20m + 21m + 22m+ ... + 2nm. -}
-somaPot2m m n = somaPot2m' m n 0
-somaPot2m' m 0 x = m + x
-somaPot2m' m n x = somaPot2m' m (n-1) x+(2^n*m) 
+somaPot2m m 0 = m
+somaPot2m m n = (2^n * m) + somaPot2m m (n-1)
 
 {- 6. Declare uma função que receba um número e retorne True caso o número seja primo e False caso contrário. Um número primo é um número natural maior que 1, e que possui apenas dois divisores: 1 e ele mesmo. -}
 primo n | n == 1 = False
@@ -54,5 +53,3 @@ seriePI n = if mod n 2 == 0 then
                -1 * 4 / (2 * (fromIntegral n) - 1) + seriePI(n-1)
             else
                 4 / (2 * (fromIntegral n) - 1) + seriePI(n-1)
-
-
