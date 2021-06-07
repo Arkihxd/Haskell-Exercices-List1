@@ -65,9 +65,7 @@ primo 10 => False
     4/1 – 4/3 + 4/5 – 4/7 + 4/9 – 4/11 + ...
 
 
-Declare uma função chamada seriePI que receba como parâmetro um inteiro n e
-
-calcule o valor da serie enquanto o termo for maior que 4/n.
+Declare uma função chamada seriePI que receba como parâmetro um inteiro n e calcule o valor da serie enquanto o termo for maior que 4/n. Como no exemplo: 
 
 ```
 abs (pi – seriePI 100) < 0.
